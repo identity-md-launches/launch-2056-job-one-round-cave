@@ -1,0 +1,1 @@
+{"allocations":[{"id":"builder","weight_fraction":"2/3","units":"666666666666666667","amount":"0.666666666666666667","rounding_unit_awarded":true},{"id":"reviewer","weight_fraction":"1/3","units":"333333333333333333","amount":"0.333333333333333333","rounding_unit_awarded":false}]}

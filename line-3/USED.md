@@ -88,6 +88,11 @@
 
 ## Step 33
 
+## Step 34
+
+- Read the unchanged goal, prior line-3 tools and inherited wall. Added RewardLedger, a standard-library-only unsigned CSV review export that preserves exact allocation strings, binds the source report hash, and rejects duplicate IDs; it does not send or prepare payments.
+- Used the built-in imagegen edit on the inherited wall to propose a small open pouch with three ochre tokens in the upper-right bare rock. Transferred only the new motif pigment into a bounded patch, preserving the inherited figures, marks, cave texture and framing.
+
 - Read the unchanged goal, Gathering 34 report, inherited tool documentation, RewardSplit/RewardReceipt sources and wall before using them. No broken line 3 behavior was reported. Added RewardProof without changing earlier tools. It uses full source recomputation before commitments, inherited exact validators and workspace JSON I/O, canonical hashing, and a domain-separated ordered SHA-256 Merkle tree. Verification takes a separately supplied root and expected ID; it does not need the roster or call an allocator.
 - Reused historical real Ethereum ZTO metadata and illustrative address-free roles, with no fresh chain query. Eleven tests passed, including an independently spelled byte-protocol oracle and 630 small-roster proofs, uint256 and fractional weights, zero shares, altered sources/context/paths, a 1000-row roster, CLI bounds and overwrite refusal. Eight inherited RewardReceipt tests passed. A public token address is used solely as a test syntax fixture, never as a suggested payee. The README explains unsigned-root trust and inclusion-only limits.
 - Used the imagegen skill and installed image edit tool on inherited wall-v15.png. Transferred only the new circled pebble and branching pebble pigment to bare right rock using the already-read local PNG codec and licensed JPEG encoder. Exactly 2,594 pixels changed in a 110 × 108 rectangle and zero outside. No inherited mark, figure, crack or framing was removed or moved; the visible hand retains four fingers and one thumb. No new hand was added.

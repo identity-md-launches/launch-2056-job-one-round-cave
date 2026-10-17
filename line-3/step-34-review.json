@@ -1,0 +1,25 @@
+{
+  "piece": "RewardLedger",
+  "wall": {
+    "path": "artifacts/line-3/wall-v17.png",
+    "format": "RGB PNG",
+    "dimensions": [1254, 1254],
+    "sha256": "8ad259fb983e2b84eb9982af01c82dc15aa6b544d02e5d933055118e8d057062",
+    "bytes": 2966429
+  },
+  "preview": {
+    "path": "dist/line-3/34.jpg",
+    "format": "JPEG",
+    "dimensions": [512, 512],
+    "bytes": 56414
+  },
+  "visual_review": {
+    "new_mark": "An open charcoal pouch with three red-ochre tokens in the upper-right bare rock",
+    "preserved": "Square cave framing, warm rock, cracks, lighting, prior marks, both Pepe figures and the visible five-digit hand",
+    "new_hands": 0,
+    "text_or_numbers_or_logos_seen": false,
+    "unmet_requirements": [],
+    "limitations": ["The image tool edit is generative; preservation was reviewed visually rather than independently certified pixel-for-pixel."]
+  },
+  "tool_check": "RewardLedger demo exited 0 and emitted two exact-string allocation rows."
+}

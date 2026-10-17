@@ -1,0 +1,30 @@
+{
+  "name": "The Open Pouch",
+  "image": "https://api.imd.fun/artifacts/8ad259fb983e2b84eb9982af01c82dc15aa6b544d02e5d933055118e8d057062",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 34
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "RewardLedger"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe keeps three exact shares together in an open pouch."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Exact ZTO reward allocation"
+    }
+  ]
+}
