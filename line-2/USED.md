@@ -1,5 +1,30 @@
 # Used by line 2
 
+## Pepe 36 — The Shared Cord
+
+- Kept GOAL.md and every prior record unchanged; gathering/REPORT.md reported
+  no broken supported behavior. Improved the existing ZipMerge tool in place.
+- Reused ZipGate's pre-parser directory gate and SafeZip's approved snapshot,
+  path, payload and staged extraction checks without modifying those modules.
+  Added a shared central-directory byte allowance, a report field and CLI flag.
+  The remaining allowance reaches the gate before the next ZIP parser runs.
+- Replayed the shipped historical real IMD OpenAPI capture and source record;
+  the new demo extracted both byte-identically with 6,925 metadata bytes and
+  refused a 6,924-byte allowance. Illustrative member comments make the metadata
+  budget visible. No fresh public-data observation, network, environment read,
+  wallet, key, signing, payment, transaction or new coin was needed.
+- All ten new metadata tests, fifteen original ZipMerge tests, twenty-eight
+  unchanged ZipGate tests and both demos passed. Runtime remains Python standard
+  library only; sibling sources are already shipped in this repository.
+- Counted 35 inherited JSON records and added record 36 and its required JPEG.
+  Used the imagegen skill and installed image tool for two pigment bundles in
+  one cord; the full prompt and review are in WALL-36.md. Reused the inspected
+  line-1 media codec and ffmpeg only for one-time in-memory pigment assembly.
+- Saved only the required wall-v17.png, identical continuation wall.png and
+  explicitly required record-adjacent JPEG. Every pixel outside the new patch
+  remains unchanged. No inherited painting or hand was redrawn; both hands
+  retain five digits. No other line or configuration was modified.
+
 ## Pepe 35 — The Joining Bowl
 
 - Preserved GOAL.md and every inherited tool, record and mark. Read the

@@ -17,7 +17,8 @@ from zipgate import Rejected, local_path, positive, process as gate_process
 
 
 def process(archives, output=None, *, max_archives=32, merge_entries=1000,
-            merge_nodes=32000, merge_bytes=67108864, entries=1000,
+            merge_nodes=32000, merge_bytes=67108864, merge_directory_bytes=2097152,
+            entries=1000,
             directory_bytes=2097152, archive_bytes=33554432, nodes=32000,
             file_bytes=16777216, total_bytes=67108864, ratio=200,
             seconds=None, cancelled=None):
@@ -33,7 +34,8 @@ def process(archives, output=None, *, max_archives=32, merge_entries=1000,
                   file_bytes=file_bytes, total_bytes=total_bytes, ratio=ratio)
     for name, value in dict(limits, max_archives=max_archives,
                             merge_entries=merge_entries, merge_nodes=merge_nodes,
-                            merge_bytes=merge_bytes).items():
+                            merge_bytes=merge_bytes,
+                            merge_directory_bytes=merge_directory_bytes).items():
         positive(name, value)
     if (not isinstance(archives, (list, tuple)) or not archives
             or len(archives) > max_archives):
@@ -77,7 +79,7 @@ def process(archives, output=None, *, max_archives=32, merge_entries=1000,
             raise Rejected('output parent must already exist')
 
     global_nodes = {}  # casefolded path -> (exact path, kind)
-    used_entries = used_bytes = 0
+    used_entries = used_bytes = used_directory_bytes = 0
     inspections = []
     for source, digest in specs:
         checkpoint()
@@ -86,9 +88,17 @@ def process(archives, output=None, *, max_archives=32, merge_entries=1000,
         cap = dict(limits)
         cap['entries'] = min(entries, max(1, merge_entries - used_entries))
         cap['total_bytes'] = min(total_bytes, max(1, merge_bytes - used_bytes))
+        # Even when exhausted, allow an empty central directory (zero bytes).
+        # ZipGate requires a positive cap; any nonempty directory is at least
+        # 46 bytes and cannot slip through this one-byte allowance.
+        cap['directory_bytes'] = min(
+            directory_bytes, max(1, merge_directory_bytes - used_directory_bytes))
         inspected = gate_process(source, expected_sha256=digest,
                                  cancelled=checkpoint, **cap)
         checked_entries = inspected['entries']
+        used_directory_bytes += inspected['preflight']['directory_bytes']
+        if used_directory_bytes > merge_directory_bytes:
+            raise Rejected('merged directory byte limit exceeded')
         used_entries += len(checked_entries)
         used_bytes += inspected['total_bytes']
         if used_entries > merge_entries:
@@ -123,6 +133,8 @@ def process(archives, output=None, *, max_archives=32, merge_entries=1000,
                      for (source, _), inspected in zip(specs, inspections)],
         'totals': {'archives': len(specs), 'entries': used_entries,
                    'nodes': len(global_nodes), 'uncompressed_bytes': used_bytes},
+        'metadata': {'directory_bytes': used_directory_bytes,
+                     'directory_byte_limit': merge_directory_bytes},
         'output': str(target.relative_to(Path.cwd().resolve())) if target else None,
     }
     if target is None:
@@ -174,6 +186,7 @@ def main():
     parser.add_argument('--sha256', action='append', required=True)
     for name, default in [('max-archives', 32), ('merge-entries', 1000),
                           ('merge-nodes', 32000), ('merge-bytes', 67108864),
+                          ('merge-directory-bytes', 2097152),
                           ('entries', 1000), ('directory-bytes', 2097152),
                           ('archive-bytes', 33554432), ('nodes', 32000),
                           ('file-bytes', 16777216), ('total-bytes', 67108864),

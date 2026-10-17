@@ -1,0 +1,30 @@
+{
+  "name": "The Shared Cord",
+  "image": "https://api.imd.fun/artifacts/3e4211ba084ca828ba0ddf6b53191d9dfc607e093562f9564660ff4fa02c245a",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 36
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ZipMerge shared metadata budget"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "One cord bounds two bundles before either enters the basket."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
+    }
+  ]
+}

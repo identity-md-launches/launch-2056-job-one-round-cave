@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "tests": {
+    "new_metadata": 10,
+    "inherited_zipmerge": 15,
+    "inherited_zipgate": 28,
+    "total": 53
+  },
+  "demos": [
+    "metadata_demo.py: passed; 6925-byte exact cap; 6924 refused; historical capture identical",
+    "demo.py: passed; original behavior preserved"
+  ],
+  "record_count": 36,
+  "old_records_unchanged": 35,
+  "goal_byte_identical": true,
+  "named_output_exists": true,
+  "named_output_untracked": true,
+  "scope_check_passed": true,
+  "new_files_under_100KB_outside_artifacts": true,
+  "wall_sha256": "3e4211ba084ca828ba0ddf6b53191d9dfc607e093562f9564660ff4fa02c245a",
+  "limitations": [
+    "Local observations only",
+    "Cooperative deadline and filesystem; no hard CPU/RAM sandbox"
+  ]
+}
