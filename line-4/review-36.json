@@ -1,0 +1,39 @@
+{
+  "ancestor_sha256": "5f1ea2b857e4d1175593a6358269785eef1e35f5a48e6eeaafd74bffe7e99085",
+  "sha256": "f80a5b365c016a753d362ce538a488958ecf4a1dd2ffe01eaac136f4e2cc288e",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "RGB PNG",
+  "wall": "artifacts/line-4/wall-v17.png",
+  "canonical_wall": "artifacts/line-4/wall.png",
+  "preview": "dist/line-4/36.jpg",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 87974,
+  "png_bytes": 1709927,
+  "addition_bounds": [
+    650,
+    170,
+    150,
+    120
+  ],
+  "changed_pixels": 2608,
+  "pixels_changed_outside_addition": 0,
+  "png_roundtrip_passed": true,
+  "method": "Installed image tool generated dry ochre trails and a charcoal pebble on white. White was removed in memory and only the small pigment silhouette blended into open upper stone. No pixel quantization or global editing.",
+  "image_tool": "Installed image.generate_image; no CLI fallback",
+  "image_prompt": "Use case: illustration-story. One isolated small prehistoric pigment motif centered on a pure white background with wide margins, for compositing onto existing cave rock. Two short uneven red ochre trails from upper left and lower left converge at a single charcoal black round pebble on the right. One tiny yellow ochre dot beside each left trail end. Flat handmade dry pigment strokes, rough worn edges, porous speckled grain, as if made with burnt stick and thumb. Only red ochre, yellow ochre and charcoal black pigment. No shadows, no stone backdrop, no hands, no frog, no letters, no numbers, no captions, no signatures, no logos, no watermark, no border or frame. Motif fills middle half of image; the rest is plain white.",
+  "visual_review": "Inspected the full PNG and final 512px JPEG. Two worn ochre trails meet a charcoal pebble on upper stone. Pepe retains his wide mouth and heavy-lidded eyes. Counted both inherited hands: five digits each, four fingers and one thumb. Neither hand was changed and no new hand or stencil was added. No letters, numbers, captions, signatures, logos, watermarks, borders or frames were added. Prior paintings, rock, cracks, light and framing remain.",
+  "unmet_visual_requirements": [
+    "Inherited stone has photographic texture; preserved as supplied to retain the ancestral wall."
+  ],
+  "visual_limitations": [
+    "The small mark loses pigment grain in the 512px preview.",
+    "Self-inspection only; no independent visual certification."
+  ]
+}

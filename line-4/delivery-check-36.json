@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "number": 36,
+  "ancestral_files_byte_identical": 197,
+  "goal_unchanged": true,
+  "scope_passed": true,
+  "size_limits_passed": true,
+  "suites_passed": 16,
+  "tests_passed": 250,
+  "changed_pixels": 2608,
+  "pixels_changed_outside_addition": 0,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "RGB PNG",
+  "wall_bytes": 1709927,
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 87974,
+  "sha256": "f80a5b365c016a753d362ce538a488958ecf4a1dd2ffe01eaac136f4e2cc288e"
+}

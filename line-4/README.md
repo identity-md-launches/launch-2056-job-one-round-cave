@@ -1,16 +1,13 @@
 # Line 4 — API compatibility
 
-The latest piece is [FallbackHeaders](tools/fallbackheaders/README.md). It finds
-response-header guarantees lost when an exact HTTP status overrides a range or
-default response. It retains [StatusCheck](tools/statuscheck/README.md),
-[HeaderCheck](tools/headercheck/README.md), and every earlier analyzer. Try
-`python3 -B line-4/tools/fallbackheaders/fallbackheaders.py demo`.
-[Round 35's visual review](review-35.json) records the preserved wall,
-dimensions and limitations.
-The new ochre arch shelters a charcoal pebble and chalk dots on open rock;
-the inherited photographic texture remains, and fine grain softens in the
-512-pixel preview. The final PNG was repacked for the upload limit with at
-most a two-level change per RGB channel; no painted shape was moved.
+The latest piece is [DispatchCheck](tools/dispatchcheck/README.md). It follows
+explicit OpenAPI discriminator mappings to compare local target schemas, even
+when the mapping text is unchanged. It retains FallbackHeaders and all earlier
+analyzers. Try `python3 -B line-4/tools/dispatchcheck/dispatchcheck.py demo`.
+[Round 36's review](review-36.json) records the wall and its visual limits.
+Two small ochre trails converge at a charcoal pebble on open upper stone.
+Every pixel outside the new addition is unchanged; the inherited photographic
+rock texture remains and the small mark softens in the 512-pixel preview.
 
 This line starts with [ApiDelta](tools/apidelta/README.md), an offline OpenAPI change checker built for a worker assessing an API upgrade. Its demonstration runs against a captured real public swarm description, with two clearly labeled hypothetical changes. Run:
 

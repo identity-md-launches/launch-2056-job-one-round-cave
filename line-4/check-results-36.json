@@ -1,0 +1,210 @@
+{
+  "suites": [
+    {
+      "tool": "apidelta",
+      "exit": 0,
+      "tests": 44,
+      "stdout": "",
+      "stderr": "............................................\n----------------------------------------------------------------------\nRan 44 tests in 0.254s\n\nOK\n"
+    },
+    {
+      "tool": "authcheck",
+      "exit": 0,
+      "tests": 13,
+      "stdout": "",
+      "stderr": ".............\n----------------------------------------------------------------------\nRan 13 tests in 6.830s\n\nOK\n"
+    },
+    {
+      "tool": "boundcheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.161s\n\nOK\n"
+    },
+    {
+      "tool": "constcheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.173s\n\nOK\n"
+    },
+    {
+      "tool": "dependcheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.906s\n\nOK\n"
+    },
+    {
+      "tool": "dispatchcheck",
+      "exit": 0,
+      "tests": 19,
+      "stdout": "",
+      "stderr": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.104s\n\nOK\n"
+    },
+    {
+      "tool": "fallbackheaders",
+      "exit": 0,
+      "tests": 9,
+      "stdout": "",
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.014s\n\nOK\n"
+    },
+    {
+      "tool": "headercheck",
+      "exit": 0,
+      "tests": 15,
+      "stdout": "",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.024s\n\nOK\n"
+    },
+    {
+      "tool": "idcheck",
+      "exit": 0,
+      "tests": 13,
+      "stdout": "",
+      "stderr": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.213s\n\nOK\n"
+    },
+    {
+      "tool": "multiplecheck",
+      "exit": 0,
+      "tests": 16,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 1.012s\n\nOK\n"
+    },
+    {
+      "tool": "oauthcheck",
+      "exit": 0,
+      "tests": 16,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.205s\n\nOK\n"
+    },
+    {
+      "tool": "paramcheck",
+      "exit": 0,
+      "tests": 14,
+      "stdout": "",
+      "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.020s\n\nOK\n"
+    },
+    {
+      "tool": "schemecheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.309s\n\nOK\n"
+    },
+    {
+      "tool": "servercheck",
+      "exit": 0,
+      "tests": 15,
+      "stdout": "",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.216s\n\nOK\n"
+    },
+    {
+      "tool": "statuscheck",
+      "exit": 0,
+      "tests": 22,
+      "stdout": "",
+      "stderr": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.050s\n\nOK\n"
+    },
+    {
+      "tool": "uniquecheck",
+      "exit": 0,
+      "tests": 10,
+      "stdout": "",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.221s\n\nOK\n"
+    }
+  ],
+  "demo": {
+    "schema": "apidelta-report-v1",
+    "perspective": "existing clients upgrading to the new description",
+    "status": "breaking",
+    "counts": {
+      "breaking": 1,
+      "review": 1,
+      "info": 0
+    },
+    "operations_compared": 5,
+    "findings": [
+      {
+        "severity": "review",
+        "code": "document_metadata_changed",
+        "location": "/",
+        "message": "Document metadata, components or extensions changed; review anything not covered by specific findings."
+      },
+      {
+        "severity": "breaking",
+        "code": "schema_type_incompatible",
+        "location": "/paths/~1openapi.json/get/responses/200/content/application~1json/schema/discriminator/mapping/done/target/properties/receipt/type",
+        "message": "Response can produce types old clients did not expect."
+      }
+    ],
+    "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+    "extension": "dispatchcheck-v1 (includes fallbackheaders and earlier analyzers)",
+    "dispatch_pairs": [
+      {
+        "location": "/paths/~1openapi.json/get/responses/200/content/application~1json/schema/discriminator/mapping/done",
+        "tag": "done",
+        "direction": "response",
+        "old_target": "#/components/schemas/DispatchExample36",
+        "new_target": "#/components/schemas/DispatchExample36"
+      }
+    ],
+    "schema_visits": 365,
+    "selector_groups": [],
+    "status_visits": 2500,
+    "remapped_header_pairs": 0,
+    "dispatch_scope": "Explicit common tags with equal propertyName; local targets only. Target constraint findings are potential branch-level breaks, not proof of whole-union incompatibility. Implicit dispatch, union satisfiability and unmatched branches are not inferred.",
+    "capture_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+    "baseline_source": "https://api.imd.fun/openapi.json",
+    "demo": "Real saved IMD operation with hypothetical response dispatch. The mapping is unchanged but receipt changes from string to integer in its target. No described operation is called."
+  },
+  "unchanged_capture": {
+    "schema": "apidelta-report-v1",
+    "perspective": "existing clients upgrading to the new description",
+    "status": "no_detected_breakage",
+    "counts": {
+      "breaking": 0,
+      "review": 0,
+      "info": 0
+    },
+    "operations_compared": 5,
+    "findings": [],
+    "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+    "extension": "dispatchcheck-v1 (includes fallbackheaders and earlier analyzers)",
+    "dispatch_pairs": [],
+    "schema_visits": 371,
+    "selector_groups": [],
+    "status_visits": 2500,
+    "remapped_header_pairs": 0,
+    "dispatch_scope": "Explicit common tags with equal propertyName; local targets only. Target constraint findings are potential branch-level breaks, not proof of whole-union incompatibility. Implicit dispatch, union satisfiability and unmatched branches are not inferred."
+  },
+  "capture_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+  "independent_payload_oracle_cases": 98,
+  "suite_scratch_policy": "TemporaryDirectory redirected to test/scratch; source tests unchanged",
+  "live": {
+    "source": "https://api.imd.fun/openapi.json",
+    "user_agent": "Pepeolithic-DispatchCheck/36.0",
+    "bytes": 23132,
+    "sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+    "matches_capture": true,
+    "comparison": {
+      "schema": "apidelta-report-v1",
+      "perspective": "existing clients upgrading to the new description",
+      "status": "no_detected_breakage",
+      "counts": {
+        "breaking": 0,
+        "review": 0,
+        "info": 0
+      },
+      "operations_compared": 5,
+      "findings": [],
+      "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+      "extension": "dispatchcheck-v1 (includes fallbackheaders and earlier analyzers)",
+      "dispatch_pairs": [],
+      "schema_visits": 371,
+      "selector_groups": [],
+      "status_visits": 2500,
+      "remapped_header_pairs": 0,
+      "dispatch_scope": "Explicit common tags with equal propertyName; local targets only. Target constraint findings are potential branch-level breaks, not proof of whole-union incompatibility. Implicit dispatch, union satisfiability and unmatched branches are not inferred."
+    }
+  }
+}

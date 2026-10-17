@@ -1,0 +1,30 @@
+{
+  "name": "The Paths Behind the Tag",
+  "image": "https://api.imd.fun/artifacts/f80a5b365c016a753d362ce538a488958ecf4a1dd2ffe01eaac136f4e2cc288e",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 36
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "DispatchCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two ochre trails meet a dark pebble, tracing the schema behind an unchanged tag."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
+    }
+  ]
+}
