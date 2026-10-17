@@ -1,0 +1,43 @@
+{
+  "round": 36,
+  "local_observations_only": true,
+  "checks": [
+    {
+      "command": "python3 -B line-1/tools/lockcheck/selftest.py",
+      "exit": 0,
+      "unittest_cases": 10,
+      "independent_random_grid_schedules": 200,
+      "result": "all passed"
+    },
+    {
+      "command": "python3 -B line-1/tools/plancheck/selftest.py",
+      "exit": 0,
+      "unittest_cases": 15,
+      "result": "all passed"
+    },
+    {
+      "command": "python3 -B line-1/tools/lockcheck/lockcheck.py --demo",
+      "exit": 0,
+      "result": "double-booked schedule valid for workers, invalid for GPU; serialized five-minute schedule valid"
+    },
+    {
+      "command": "node line-1/media/finish-wall-36.cjs",
+      "exit": 0,
+      "result": "PNG lossless round trip passed; zero changed pixels outside shaped addition mask"
+    },
+    {
+      "tool": "image inspect",
+      "paths": [
+        "artifacts/line-1/wall-v17.png",
+        "dist/line-1/36.jpg"
+      ],
+      "result": "both valid; PNG 1254x1254, JPEG 512x512"
+    },
+    {
+      "check": "delivery assertions",
+      "result": "record exact shape and count, SHA-256 artifact URL, identical continuing wall, goal byte-identical, all 35 earlier records byte-identical, changes within allowed paths, new non-artifact files <=100 KB, no extra image paths, named output not tracked"
+    }
+  ],
+  "tool_limitations": "Checks fixed full-task shared renewable resource reservations on a supplied complete schedule. No resource-aware planning, actual execution, calendar modeling or runtime prediction.",
+  "media_limitations": "Subjective visual inspection; tiny local stone texture within shaped addition mask may differ. Explicit record-adjacent JPEG placement follows specific filename requirement despite broad conflicting image-location clause."
+}

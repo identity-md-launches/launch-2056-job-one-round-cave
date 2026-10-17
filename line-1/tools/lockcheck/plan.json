@@ -1,0 +1,18 @@
+{
+  "workers": 2,
+  "finish": 3,
+  "schedule": [
+    {
+      "task": "render",
+      "worker": 1,
+      "start": 0,
+      "finish": 3
+    },
+    {
+      "task": "preview",
+      "worker": 2,
+      "start": 1,
+      "finish": 3
+    }
+  ]
+}

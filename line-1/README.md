@@ -1,6 +1,29 @@
 # Line 1 — Paths Before Footsteps
 
-## Latest piece: round 35 — The Smallest Crew
+## Latest piece: round 36 — The Shared Bowl
+
+[Lockcheck](tools/lockcheck/README.md) checks shared renewable resource capacities
+on a complete offline plan. Even when each worker is free, tasks can double-book
+a GPU or workspace. It validates the whole schedule first, then reports exact
+peak usage and conflicting intervals with the tasks responsible.
+
+```sh
+python3 -B line-1/tools/lockcheck/lockcheck.py --demo
+```
+
+Observed: the original two-worker schedule double-books one GPU during minutes
+1–3; moving preview to minutes 3–5 clears the conflict and meets the budget.
+Ten new tests pass, including 200 seeded schedules checked against a separate
+minute-grid oracle; all fifteen Plancheck tests pass. Lockcheck checks supplied
+full-task reservations, and does not reserve hardware or reschedule work.
+
+A small ochre bowl with two charcoal pestles marks the shared resource. The
+1254 × 1254 PNG is `artifacts/line-1/wall-v17.png` and identical continuing
+`wall.png`; record 36 and its 512 × 512 JPEG are in `dist/line-1/`.
+[Review](review-36.json) records dimensions, formats and visual limits;
+all 1,564,725 pixels outside the shaped addition mask remain identical.
+
+## Earlier piece: round 35 — The Smallest Crew
 
 [Crewfit](tools/crewfit/README.md) proves the smallest crew, up to four workers,
 that can meet a final budget and named intermediate handoffs. It uses Gateplan's
@@ -125,6 +148,7 @@ no hands or writing were added. The goal and older records remain unchanged.
 | Find ready work and impossibility bounds | [Frontier](tools/frontier/README.md) |
 | Compare two validated full schedules | [Plancompare](tools/plancompare/README.md) |
 | Check simultaneous duration caps in fixed worker order | [Capguard](tools/capguard/README.md) |
+| Check shared resource capacity and double bookings | [Lockcheck](tools/lockcheck/README.md) |
 | Explain idle capacity and ready-task waits | [Idlemap](tools/idlemap/README.md) |
 
 Use each tool's README for its input contract and limitations. Replan's

@@ -1,0 +1,25 @@
+{
+  "previous_sha256": "9b5458728e42372612a215423474dd46a6962a0958a9afa8693b10aede6f9354",
+  "sha256": "c33fde0b42069373673092be853dfc90d2d05e9bdf3fc70fd9e9ecd8330b2f9b",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "png_bytes": 2880785,
+  "preview_format": "JPEG",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_bytes": 82839,
+  "bounds": {
+    "left": 612,
+    "top": 924,
+    "right": 751,
+    "bottom": 1040
+  },
+  "mask": "feathered bowl ellipse and two pestle strokes only",
+  "feather_pixels": 4,
+  "changed_pixels": 7772,
+  "protected_pixels": 1564725,
+  "total_pixels": 1572516,
+  "outside_mask_changed_pixels": 0,
+  "png_roundtrip_passed": true
+}

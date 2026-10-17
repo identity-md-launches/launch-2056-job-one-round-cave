@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "id": "render",
+      "minutes": 3
+    },
+    {
+      "id": "preview",
+      "minutes": 2
+    }
+  ]
+}

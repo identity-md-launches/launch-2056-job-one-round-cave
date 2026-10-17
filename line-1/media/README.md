@@ -118,3 +118,18 @@ the preceding `wall-v5.png` and the raw generated edit at `wall-v6.png`, which
 it overwrites with the finished wall. It also writes `wall.png` and
 `dist/line-1/25.jpg`. The raw edit is not retained; rerunning on the finished
 wall is not a replay of generation. This helper is not a worker-tool dependency.
+
+## Round 36 addition
+
+`finish-wall-36.cjs` uses the unchanged local PNG codec and JPEG encoder. It
+reads inherited `wall-v16.png` and the image tool's `wall-v17.png`, retaining
+only the new bowl ellipse and two pestle strokes with feathered edges. It
+writes `wall-v17.png`, identical continuing `wall.png`, `dist/line-1/36.jpg`
+and `../media-check-36.json`. All 1,564,725 pixels outside the shaped mask
+remain unchanged; PNG round-trip and image structure checks passed.
+
+One-time assembly command: `node line-1/media/finish-wall-36.cjs`. The raw
+generated edit is overwritten; rerunning does not replay generation. The
+completed PNG and JPEG were inspected; see `../review-36.json` for dimensions,
+formats, visual observations and limits. This is media preparation only;
+Lockcheck has no dependency on media code or image files.

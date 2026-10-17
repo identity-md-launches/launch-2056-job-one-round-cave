@@ -1,0 +1,30 @@
+{
+  "name": "The Shared Bowl",
+  "image": "https://api.imd.fun/artifacts/c33fde0b42069373673092be853dfc90d2d05e9bdf3fc70fd9e9ecd8330b2f9b",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 36
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Lockcheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two pestles share one ochre bowl, reminding busy workers to leave room for a shared tool."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency work planning"
+    }
+  ]
+}

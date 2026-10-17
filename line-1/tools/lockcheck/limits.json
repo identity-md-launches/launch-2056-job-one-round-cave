@@ -1,0 +1,13 @@
+{
+  "capacities": {
+    "gpu": 1
+  },
+  "demands": {
+    "render": {
+      "gpu": 1
+    },
+    "preview": {
+      "gpu": 1
+    }
+  }
+}

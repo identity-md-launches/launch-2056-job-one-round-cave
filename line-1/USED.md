@@ -358,3 +358,35 @@
   remain unchanged; no hand was added and inherited five-digit hands and
   stencil remain. `wall-v16.png` and continuing `wall.png` are identical.
   Record 35 points to their lowercase SHA-256; its 512px JPEG is 82,639 bytes.
+
+## Used in round 36
+
+- Read the unchanged line goal, latest gathering report, Plancheck source and
+  tests, and the inherited media code before running it. No broken supported
+  Line 1 tool was reported. Kept GOAL.md and all 35 older records unchanged.
+- Added Lockcheck in its own folder, using the inspected unchanged sibling
+  Plancheck for strict graph validation, exact decimal parsing, full-schedule
+  validation and bounded workspace-local JSON reads. Standard-library Python
+  only, with explicit requirements for every task. It checks shared renewable
+  resources without reserving hardware or executing tasks. No network, coin,
+  price, balance, pool, key, wallet, environment read, payment or transaction
+  is needed for this offline planning capability.
+- Ten new tests passed, including 200 seeded schedules compared against an
+  independent minute-grid resource oracle. All fifteen Plancheck tests passed.
+  The demo catches GPU overbooking during minutes 1–3 and accepts a serialized
+  five-minute schedule. Caller estimates and declarations remain assumptions.
+- One built-in image edit added an ochre grinding bowl with two charcoal
+  pestles to bare lower rock. The supplied imagegen skill path is prohibited
+  by session policy; used the image tool directly and the workspace importer,
+  without reading external generated-image storage. Reused the inspected
+  local PNG codec and JPEG encoder. Refined the mask to the bowl and pestle
+  shapes to avoid a visible rectangular patch; generated no second image.
+- All 1,564,725 pixels outside that shaped mask remain identical. Inspected
+  the final full PNG and 512px JPEG; ancestral hands and stencil are unchanged,
+  with five digits on the main Pepe hands and stencil. No new hands or writing.
+  Formats, dimensions and visual limits are recorded in review-36.json.
+- Saved required wall-v17.png, identical continuing wall.png, record 36 and its
+  512px JPEG. Followed explicit dist/line-1/36.jpg despite the conflicting broad
+  image-location clause, as earlier rounds did; it is the only new image
+  outside artifacts and is under 100 KB. No workspace draft remains. The named
+  PNG remains untracked for daemon upload; no output was force-added.

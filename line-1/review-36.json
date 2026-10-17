@@ -1,0 +1,51 @@
+{
+  "round": 36,
+  "mark": "The Shared Bowl",
+  "tool": "Lockcheck",
+  "wall": {
+    "path": "artifacts/line-1/wall-v17.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "c33fde0b42069373673092be853dfc90d2d05e9bdf3fc70fd9e9ecd8330b2f9b",
+    "bytes": 2880785
+  },
+  "continuing_wall": "artifacts/line-1/wall.png",
+  "preview": {
+    "path": "dist/line-1/36.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 82839
+  },
+  "preservation": {
+    "source": "artifacts/line-1/wall-v16.png",
+    "method": "Only a feathered bowl ellipse and two pestle strokes from one generated edit were composited onto the inherited wall.",
+    "protected_pixels": 1564725,
+    "outside_mask_changed_pixels": 0,
+    "old_paintings": "All ancestral pigment is outside the new bare-rock patch and remains identical."
+  },
+  "visual_review": {
+    "inspected": [
+      "inherited full wall",
+      "generated edit",
+      "assembled full PNG",
+      "assembled 512px JPEG"
+    ],
+    "observations": [
+      "One worn red-ochre bowl and two charcoal pestles added below the snail.",
+      "Inherited wide-mouth heavy-lidded Pepe figures and their hands are unchanged.",
+      "Main Pepe hands and inherited hand stencil each show five digits; no new hand or handprint was added.",
+      "Warm rock, cracks, torchlight, square size and framing retained.",
+      "No letters, numbers, captions, logos, watermark, border or frame observed."
+    ],
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Visual assessment is subjective; no independent visual certification.",
+      "Generated pigment includes a little local rock texture inside the shaped mask; outside it every pixel is preserved exactly."
+    ]
+  },
+  "preview_location": "Followed the explicit numbered JPEG beside its JSON requirement, as earlier rounds did, despite the general conflicting prohibition on pictures outside artifacts. This is the sole new picture outside artifacts, at 82839 bytes.",
+  "image_method": "One built-in image edit, imported using the workspace image importer; reused inspected local PNG codec and vendored JPEG encoder. No external cache path read by shell.",
+  "scope": "Goal unchanged; older numbered records unchanged; no key, wallet, environment, transaction, payment or network data needed for this offline planning tool."
+}
