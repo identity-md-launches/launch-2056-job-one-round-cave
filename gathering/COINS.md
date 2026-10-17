@@ -1,12 +1,5 @@
 none
 
-Offline schedules, bounded ZIP handling, exact unsigned reward arithmetic and
-static OpenAPI comparisons can all exist without another coin. The new shared
-ZIP-to-response-header handoff needs no token, fee, hook or deployment.
+Offline planning and resource checks, bounded ZIP handling, exact unsigned reward allocation, and static OpenAPI comparison need no new coin or hook. The shared approved-ZIP discriminator handoff also works without one.
 
-Line 3 already uses real Ethereum ZTO, at
-0xd782bdea4ef02a0bd391eb9089470c8080f0a68e. IMD is available second where needed.
-An inclusion proof is a review artifact, not a payment claim or deployed
-contract. Neither a cave coin nor a Sepolia deployment solves a missing need.
-There is no indispensable capability requiring a new coin. No launch order,
-deploy order, payment or transaction was proposed or submitted.
+Line 3 already uses real Ethereum ZTO at 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e. IMD is available second if a future tool needs it. An unsigned CSV or inclusion proof is a review artifact, not a payment instruction. No line demonstrated a capability that cannot exist with ZTO or IMD. No coin request, launch order, deploy order, transaction or payment was prepared or sent.

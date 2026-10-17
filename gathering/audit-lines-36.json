@@ -1,0 +1,1934 @@
+{
+  "round": 36,
+  "scope": "All documented tool checks and offline demos",
+  "summary": [
+    {
+      "line": 1,
+      "tools": 15,
+      "commands": 32,
+      "unittest_cases": 116,
+      "unexpected": 0
+    },
+    {
+      "line": 2,
+      "tools": 11,
+      "commands": 23,
+      "unittest_cases": 261,
+      "unexpected": 0
+    },
+    {
+      "line": 3,
+      "tools": 14,
+      "commands": 27,
+      "unittest_cases": 141,
+      "unexpected": 0
+    },
+    {
+      "line": 4,
+      "tools": 16,
+      "commands": 32,
+      "unittest_cases": 250,
+      "unexpected": 0
+    }
+  ],
+  "commands": [
+    {
+      "line": 1,
+      "tool": "budgetpath",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/budgetpath/budgetpath.py",
+        "line-1/tools/budgetpath/example.json"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "197ec77b6127137711ee5f59f172752e012e5ec4fc5f1754ba9b7e71d9bd5dbb",
+      "evidence": "{\n  \"budget_minutes\": 20,\n  \"critical_path\": [\n    \"inspect\",\n    \"build\",\n    \"review\"\n  ],\n  \"total_minutes\": 18,\n  \"within_budget\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "capguard",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/capguard/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.156s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "capguard",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/capguard/capguard.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "f74a81208d77111f524461993a9c34e10b8a1d635e70bfff5df777a89566fc03",
+      "evidence": "units\":\"minutes\",\"finish\":10,\"schedule\":[{\"task\":\"read\",\"worker\":1,\"start\":0,\"finish\":2},{\"task\":\"build\",\"worker\":1,\"start\":2,\"finish\":8},{\"task\":\"fixtures\",\"worker\":2,\"start\":2,\"finish\":7},{\"task\":\"check\",\"worker\":1,\"start\":8,\"finish\":10}]},\"scope\":\"All durations may reach their caps simultaneously; fixed worker assignment and order, continuously available workers, no release dates. Input idle gaps are removed. Estimates/caps are assumptions.\"}\n"
+    },
+    {
+      "line": 1,
+      "tool": "crewfit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/crewfit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 7,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "n__.CrewfitTests.test_cli_demo_and_nonproof_exit) ... ok\ntest_demo_proven_and_plan_checked (__main__.CrewfitTests.test_demo_proven_and_plan_checked) ... ok\ntest_impossible_even_with_four (__main__.CrewfitTests.test_impossible_even_with_four) ... ok\ntest_seeded_independent_minute_grid (__main__.CrewfitTests.test_seeded_independent_minute_grid) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.171s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "crewfit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/crewfit/crewfit.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "939e72819ea6ff5cffc3e16f67615144e0700a7f98ee08b2399180c12982773a",
+      "evidence": "\": 2,\n  \"plan\": {\n    \"units\": \"minutes\",\n    \"workers\": 2,\n    \"finish\": 4,\n    \"schedule\": [\n      {\n        \"task\": \"background\",\n        \"worker\": 1,\n        \"start\": 0,\n        \"finish\": 4\n      },\n      {\n        \"task\": \"release\",\n        \"worker\": 2,\n        \"start\": 0,\n        \"finish\": 1\n      },\n      {\n        \"task\": \"handoff\",\n        \"worker\": 2,\n        \"start\": 1,\n        \"finish\": 3\n      }\n    ]\n  },\n  \"minimum_proven\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "frontier",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/frontier/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 12,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.041s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "frontier",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/frontier/frontier.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "8a893c1c244e0fe2c2222adc0537ac5ed1595829828a8f2da4738b39f848178f",
+      "evidence": "r_bound\": \"6\",\n  \"capacity_lower_bound\": \"9/2\",\n  \"remaining_lower_bound\": \"6\",\n  \"available_minutes\": \"7\",\n  \"deadline_status\": \"not_ruled_out\",\n  \"scope\": \"Snapshot only. Lower bounds cannot prove feasibility. Ready ordering is a heuristic, not an optimal launch decision. No tasks executed.\",\n  \"assumptions\": \"Interchangeable workers; running work stays active; unfinished estimates replace original durations; no historical timing certified.\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gatecheck",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gatecheck/gatecheck.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "b36657dd4b865eb4e387bb613f378bbbd04876009f661308f3e80fe188cfdbb6",
+      "evidence": "{\n  \"tests\": 8,\n  \"passed\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gatecheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gatecheck/gatecheck.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2f7035ab5d91139adb75b267d1b670006753d0b6faa3fdf52c8aaf7bd3e73000",
+      "evidence": "\"7\",\n      \"slack_minutes\": \"0\",\n      \"on_time\": true\n    },\n    {\n      \"id\": \"handoff\",\n      \"tasks\": [\n        \"check\"\n      ],\n      \"due_minutes\": \"10\",\n      \"finish_minutes\": \"9\",\n      \"slack_minutes\": \"1\",\n      \"on_time\": true\n    }\n  ],\n  \"arithmetic\": \"exact decimal minutes; no tolerance; times printed as exact strings\",\n  \"late_gates\": [],\n  \"scope\": \"named task groups only; estimates and worker availability are caller supplied\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5cabef671b393495bf208c72ab36cd49b6b754a3f0c90188343409dd82d22082",
+      "evidence": "{\n  \"passed\": true,\n  \"checks\": 6\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--demo",
+        "--workers",
+        "1",
+        "--budget",
+        "7"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2916570327f975e97887efc7d742cf961eef388da5b5956f6b04b35215173040",
+      "evidence": "d\": 6,\n  \"state_limit\": 100000,\n  \"plan\": {\n    \"units\": \"minutes\",\n    \"workers\": 1,\n    \"finish\": 7,\n    \"schedule\": [\n      {\n        \"task\": \"release\",\n        \"worker\": 1,\n        \"start\": 0,\n        \"finish\": 1\n      },\n      {\n        \"task\": \"handoff\",\n        \"worker\": 1,\n        \"start\": 1,\n        \"finish\": 3\n      },\n      {\n        \"task\": \"background\",\n        \"worker\": 1,\n        \"start\": 3,\n        \"finish\": 7\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "goalslice",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/goalslice/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.575s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "goalslice",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/goalslice/goalslice.py",
+        "--demo",
+        "--explain"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "e253a89cabad93e6c6af1147f5c10b21c50e0f083241a42ac3579bbd935344f9",
+      "evidence": "ired_by\": {\n    \"brief\": [\n      \"deliver\"\n    ],\n    \"build\": [\n      \"deliver\"\n    ],\n    \"deliver\": [\n      \"deliver\"\n    ],\n    \"test\": [\n      \"deliver\"\n    ]\n  },\n  \"omitted\": [\n    \"optional-chart\",\n    \"optional-polish\"\n  ],\n  \"retained_effort_minutes\": \"11\",\n  \"omitted_effort_minutes\": \"12\",\n  \"scope\": \"Caller-selected deliverables and declared prerequisites only; effort is not elapsed time or a deadline guarantee; no task execution.\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "idlemap",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/idlemap/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.343s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "idlemap",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/idlemap/idlemap.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "733293d8ae7c665561e7c8155b7888f97e1ecd5d4d163c7771603656860b7028",
+      "evidence": "workers_busy\": \"0\"\n    },\n    {\n      \"task\": \"fixtures\",\n      \"ready_at\": \"0\",\n      \"start\": \"4\",\n      \"ready_wait_minutes\": \"4\",\n      \"wait_with_spare_capacity\": \"4\",\n      \"wait_with_all_workers_busy\": \"0\"\n    }\n  ],\n  \"scope\": \"observed intervals at supplied estimates, from zero to plan finish; spare capacity assumes interchangeable workers; waiting may be intentional; no execution, rescheduling, optimality or achievable speedup claim\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "lockcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/lockcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "_immutable_and_order_independent) ... ok\ntest_multiple_and_unused_resources (__main__.Checks.test_multiple_and_unused_resources) ... ok\ntest_no_demands (__main__.Checks.test_no_demands) ... ok\ntest_numeric_rendering (__main__.Checks.test_numeric_rendering) ... ok\ntest_withheld_invalid_schedule (__main__.Checks.test_withheld_invalid_schedule) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.564s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "lockcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/lockcheck/lockcheck.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "8a9c0ffd6de12cb291546fa055bbe994c309450019ecd9b20135d4380d2c967a",
+      "evidence": "rue,\n    \"schedule_valid\": true,\n    \"schedule_violations\": [],\n    \"resources\": [\n      {\n        \"id\": \"gpu\",\n        \"capacity\": 1,\n        \"peak_units\": 1,\n        \"valid\": true,\n        \"conflicts\": []\n      }\n    ],\n    \"scope\": \"fixed full-task reservations on [start, finish); caller-supplied capacities and estimates; no execution or rescheduling\",\n    \"arithmetic\": \"exact decimal minutes rendered as strings; integer resource units\"\n  }\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "optplan",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/optplan/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "est_invalid_graphs) ... ok\ntest_seeded_oracle (__main__.OptplanTests.test_seeded_oracle) ... ok\ntest_serial_and_unlimited_workers (__main__.OptplanTests.test_serial_and_unlimited_workers) ... ok\ntest_simultaneous_completions (__main__.OptplanTests.test_simultaneous_completions) ... ok\ntest_state_limit (__main__.OptplanTests.test_state_limit) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.213s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "optplan",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/optplan/optplan.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "291b2c3ac98d8ad400857c35c47b7bbd4f7f15710ad0dc598036115630fdae44",
+      "evidence": "PASS: optimum demos, intentional-idle regression, worker bound, integer/task limits\n"
+    },
+    {
+      "line": 1,
+      "tool": "optplan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/optplan/optplan.py",
+        "--idle-demo",
+        "--workers",
+        "2"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "ba8d7d794b626cab47a70497a6e0596aa03faf0f329a568536f8b354264a09be",
+      "evidence": "  \"task\": \"build-a\",\n      \"worker\": 1,\n      \"start\": 1,\n      \"finish\": 8\n    },\n    {\n      \"task\": \"build-b\",\n      \"worker\": 2,\n      \"start\": 1,\n      \"finish\": 8\n    },\n    {\n      \"task\": \"background\",\n      \"worker\": 1,\n      \"start\": 8,\n      \"finish\": 14\n    },\n    {\n      \"task\": \"integrate\",\n      \"worker\": 2,\n      \"start\": 8,\n      \"finish\": 16\n    }\n  ],\n  \"states_examined\": 24,\n  \"state_limit\": 100000,\n  \"proven_optimal\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "test_idle_is_valid (__main__.Checks.test_idle_is_valid) ... ok\ntest_nested_worker_overlaps (__main__.Checks.test_nested_worker_overlaps) ... ok\ntest_read_boundary (__main__.Checks.test_read_boundary) ... ok\ntest_valid_and_immutable (__main__.Checks.test_valid_and_immutable) ... ok\ntest_worker_and_units (__main__.Checks.test_worker_and_units) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.298s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancheck/plancheck.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "53734f67ffa159d87ec596df66115ff23b2132b6899de6641e1ed60a9c58e742",
+      "evidence": "o execution or optimality proof\"\n  },\n  \"tampered_example\": {\n    \"valid\": false,\n    \"violations\": [\n      \"dependency_violation:build->check\",\n      \"worker_overlap:1:check\"\n    ],\n    \"tasks_expected\": 4,\n    \"schedule_entries\": 4,\n    \"workers_checked\": 2,\n    \"deadline_checked\": true,\n    \"arithmetic\": \"exact decimal values; no tolerance\",\n    \"scope\": \"full schedule feasibility at supplied estimates; no execution or optimality proof\"\n  }\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancompare",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancompare/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.289s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancompare",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancompare/plancompare.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5137c6e007916ece0cba8e768744ecf7a4c76f1bcd453632dcbbba8ca4845c00",
+      "evidence": "      \"after_worker\": 1,\n      \"worker_changed\": false\n    },\n    {\n      \"task\": \"fixtures\",\n      \"timing\": \"earlier\",\n      \"start_delta\": \"-4\",\n      \"finish_delta\": \"-4\",\n      \"before_worker\": 1,\n      \"after_worker\": 2,\n      \"worker_changed\": true\n    }\n  ],\n  \"scope\": \"same full job and estimates; deltas are after minus before; no execution, progress or optimality claim\",\n  \"before_deadline_margin\": \"1\",\n  \"after_deadline_margin\": \"3\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "replan",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/replan/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 14,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "and_worker) ... ok\ntest_running_workers_are_pinned (__main__.ReplanTests.test_running_workers_are_pinned) ... ok\ntest_simultaneous_completions_release_all_dependencies (__main__.ReplanTests.test_simultaneous_completions_release_all_dependencies) ... ok\ntest_timestamp_precision_rejected (__main__.ReplanTests.test_timestamp_precision_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.324s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "replan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/replan/replan.py",
+        "--demo",
+        "--workers",
+        "2",
+        "--budget",
+        "27"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "61b124385a4b45d81405a89df52964e395756511bf96a5952082e93b9cd055ed",
+      "evidence": ".0,\n      \"finish\": 26.0,\n      \"state\": \"pending\",\n      \"remaining_minutes\": 2.0\n    }\n  ],\n  \"finish\": 26.0,\n  \"remaining_minutes\": 17.0,\n  \"lower_bound_remaining\": 17.0,\n  \"earliest_possible_finish\": 26.0,\n  \"critical_path\": [\n    \"implement\",\n    \"verify\",\n    \"write-handoff\"\n  ],\n  \"fits_budget\": true,\n  \"deadline_verdict\": \"fits\",\n  \"slack\": 1.0,\n  \"method\": \"nonpreemptive longest downstream first; running tasks pinned to their workers\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "slackmap",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/slackmap/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "st_integrates_existing_planners (__main__.Checks.test_integrates_existing_planners) ... ok\ntest_max_chain_and_determinism (__main__.Checks.test_max_chain_and_determinism) ... ok\ntest_oracle_and_float_sensitivity (__main__.Checks.test_oracle_and_float_sensitivity) ... ok\ntest_rejects_invalid_inputs (__main__.Checks.test_rejects_invalid_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.743s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "slackmap",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/slackmap/slackmap.py",
+        "--demo",
+        "--budget",
+        "10"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "03d11b160b09c50f14bfcd5f04b34ba5d639e3d6027d764681f38ae30e34c288",
+      "evidence": "k\": \"read\",\n      \"minutes\": \"2\",\n      \"earliest_start\": \"0\",\n      \"earliest_finish\": \"2\",\n      \"latest_start\": \"1\",\n      \"latest_finish\": \"3\",\n      \"total_float\": \"1\",\n      \"free_float\": \"0\",\n      \"critical_to_minimum\": true\n    }\n  ],\n  \"scope\": \"Unlimited workers: dependency lower bound only, not finite-worker feasibility.\",\n  \"warning\": \"Float is individual, not additive or permission to delay every task. Estimates are assumptions.\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "workplan",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/workplan/workplan.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "75df0f1855685f10e79216f2a4a32d1ef479f8301eae1df53393b056896d5c38",
+      "evidence": "PASS: demo, deadline checks, invalid inputs, 150 seeded dependency graphs, determinism and resource constraints\n"
+    },
+    {
+      "line": 1,
+      "tool": "workplan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/workplan/workplan.py",
+        "--demo",
+        "--workers",
+        "2",
+        "--budget",
+        "25"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2aa47d5ac31bf81bce6b054a873d65ad5f1ed083afe2fb78e8f960c7877b1d10",
+      "evidence": "    {\n      \"task\": \"verify\",\n      \"worker\": 1,\n      \"start\": 15,\n      \"finish\": 20\n    },\n    {\n      \"task\": \"write-handoff\",\n      \"worker\": 1,\n      \"start\": 20,\n      \"finish\": 22\n    }\n  ],\n  \"finish\": 22,\n  \"critical_path\": [\n    \"read-brief\",\n    \"implement\",\n    \"verify\",\n    \"write-handoff\"\n  ],\n  \"critical_path_minutes\": 22,\n  \"lower_bound\": 22,\n  \"budget\": 25.0,\n  \"fits_budget\": true,\n  \"deadline_verdict\": \"fits\",\n  \"slack\": 3.0\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "refusal",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--demo",
+        "--workers",
+        "1",
+        "--budget",
+        "6"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "d149fc68ce135c4b02cc10f6b7bf80c0212fe69dc150bf0b50bc2e8dff0aff13",
+      "evidence": "{\n  \"status\": \"infeasible\",\n  \"proven\": true,\n  \"workers\": 1,\n  \"budget\": 6,\n  \"states_examined\": 5,\n  \"state_limit\": 100000\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "refusal",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--demo",
+        "--max-states",
+        "1"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "gateplan: state limit exceeded; feasibility not established\n"
+    },
+    {
+      "line": 2,
+      "tool": "safezip",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/safezip/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 44,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "d (__main__.SafeZipTests.test_symlink_paths_refused) ... ok\ntest_time_budget_before_read_and_after_staging (__main__.SafeZipTests.test_time_budget_before_read_and_after_staging) ... ok\ntest_truncated_archive (__main__.SafeZipTests.test_truncated_archive) ... ok\ntest_unsupported_compression (__main__.SafeZipTests.test_unsupported_compression) ... ok\n\n----------------------------------------------------------------------\nRan 44 tests in 1.310s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "safezip",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/safezip/swarm_demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "0859e2b4d5b4bab43cc858d6e8adc1036ac0801410fb8a45fb5e4caf060560c5",
+      "evidence": "ample_source\": \"https://api.imd.fun/openapi.json\",\n  \"sample_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"sample_bytes\": 23132,\n  \"archive_sha256\": \"a19b6d49f1bad5d27b51696e8050555390f1a006fc3420c87d57c8782257c718\",\n  \"zip_entries\": 1,\n  \"filesystem_nodes_excluding_destination_root\": 3,\n  \"nodes_2\": \"filesystem node limit exceeded\",\n  \"nodes_3\": \"extracted; bytes match capture\",\n  \"failed_stage_removed\": true\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipaudit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipaudit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "ce_limits (__main__.AuditTests.test_reference_limits) ... ok\ntest_root_symlink (__main__.AuditTests.test_root_symlink) ... ok\ntest_same_size_change (__main__.AuditTests.test_same_size_change) ... ok\ntest_symlink_file_and_directory (__main__.AuditTests.test_symlink_file_and_directory) ... ok\ntest_type_swap (__main__.AuditTests.test_type_swap) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.191s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipaudit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipaudit/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4582d0179bc059d8321e3f4dccccf444242755ecf97a8a59c5a7c2369f41f36e",
+      "evidence": "{\n  \"ok\": true,\n  \"network_used\": false,\n  \"source\": \"https://api.imd.fun/openapi.json\",\n  \"source_bytes\": 23132,\n  \"before\": {\n    \"ok\": true,\n    \"mode\": \"audit\",\n    \"archive_sha256\": \"a19b6d49f1bad5d27b51696e8050555390f1a006fc3420c87d57c8782257c718\",\n    \"nodes_checked\": 3,\n    \"bytes_checked\": 23132,\n    \"exact_tree\": true\n  },\n  \"same_size_damage_rejected\": \"content differs: 'docs/imd/openapi.json'\"\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbatch",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbatch/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 30,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "symlink_source) ... ok\ntest_unsafe_member (__main__.BatchTests.test_unsafe_member) ... ok\ntest_uppercase_approval (__main__.BatchTests.test_uppercase_approval) ... ok\ntest_wrong_approval (__main__.BatchTests.test_wrong_approval) ... ok\ntest_zero_byte_entry_after_exhausted_bytes (__main__.BatchTests.test_zero_byte_entry_after_exhausted_bytes) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.269s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbatch",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbatch/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "34a28daf5bd5b43948b57536e008a42bcef081464d9d5812df8d36d9e29ab9b0",
+      "evidence": "ectory_bytes\": 67,\n          \"zip64\": false\n        }\n      }\n    ],\n    \"totals\": {\n      \"archives\": 2,\n      \"entries\": 2,\n      \"nodes_including_roots\": 8,\n      \"uncompressed_bytes\": 46264\n    },\n    \"batch_limits\": {\n      \"archives\": 32,\n      \"entries\": 2,\n      \"nodes_including_roots\": 8,\n      \"uncompressed_bytes\": 46264\n    }\n  },\n  \"each_fits_alone_but_batch_refused\": \"total uncompressed limit exceeded\",\n  \"nothing_extracted\": true\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbudget",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbudget/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 20,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "est_path_replacement_uses_snapshot) ... ok\ntest_source_symlink (__main__.BudgetTests.test_source_symlink) ... ok\ntest_trailing_bytes (__main__.BudgetTests.test_trailing_bytes) ... ok\ntest_underreported_entries (__main__.BudgetTests.test_underreported_entries) ... ok\ntest_workspace_confinement (__main__.BudgetTests.test_workspace_confinement) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.379s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbudget",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbudget/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "a075332b14105e8c51269159fe64ae10a19cca8561389bb1d2e5b9c322d72237",
+      "evidence": "counts_complete\": true,\n    \"archive_sha256\": \"71812304f501265453d2a1b046829f16bf0c66eb2d8122e6d5c6d7ac65be675c\",\n    \"archive_bytes\": 4780,\n    \"preflight\": {\n      \"entries\": 1,\n      \"directory_bytes\": 67,\n      \"zip64\": false\n    },\n    \"content_checked\": false\n  },\n  \"byte_budget_refused\": true,\n  \"directory_refusal\": \"directory byte limit exceeded before ZIP parsing\",\n  \"digest_bound_payload_validation_passed\": true,\n  \"extracted\": false\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipdiff",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipdiff/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "_size_content_change (__main__.DiffTests.test_same_size_content_change) ... ok\ntest_symlink_and_outside_paths (__main__.DiffTests.test_symlink_and_outside_paths) ... ok\ntest_type_swap_both_directions (__main__.DiffTests.test_type_swap_both_directions) ... ok\ntest_unsafe_archive_either_side (__main__.DiffTests.test_unsafe_archive_either_side) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.248s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipdiff",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipdiff/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "92f8724f544425ce4ae43973d8f244109b07513d47214aa71e7fd2c45b1202c9",
+      "evidence": "s\": [\n      {\n        \"path\": \"docs/imd/openapi.json\",\n        \"change\": \"content_changed\",\n        \"before\": {\n          \"kind\": \"file\",\n          \"bytes\": 23132,\n          \"sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n        },\n        \"after\": {\n          \"kind\": \"file\",\n          \"bytes\": 23132,\n          \"sha256\": \"764091492865576d86286c79317f95908dedcec124030b2f884299403c8ecbbd\"\n        }\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipexpect",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipexpect/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 24,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "_same_size_wrong_content) ... ok\ntest_unexpected_empty_directory (__main__.ExpectTests.test_unexpected_empty_directory) ... ok\ntest_unsafe_member_not_ignored (__main__.ExpectTests.test_unsafe_member_not_ignored) ... ok\ntest_uppercase_hash (__main__.ExpectTests.test_uppercase_hash) ... ok\ntest_wrong_size (__main__.ExpectTests.test_wrong_size) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.270s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipexpect",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipexpect/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "511877f30f8cef11db47807717f19caec6bf8abfa9798de9b880957d422aaf99",
+      "evidence": "ture\": true,\n  \"extra_file_refused\": \"expected file paths differ from archive\",\n  \"extracted_bytes_identical\": true,\n  \"report\": {\n    \"ok\": true,\n    \"mode\": \"extract\",\n    \"archive_sha256\": \"5cb5812d3e007e5bd6c9181ad95173757da85570b4f43c10b46f061452acb3cc\",\n    \"expected_files\": 1,\n    \"expected_content_matched\": true,\n    \"total_bytes\": 23132,\n    \"preflight\": {\n      \"entries\": 1,\n      \"directory_bytes\": 63,\n      \"zip64\": false\n    }\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipgate",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipgate/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 28,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "xtract) ... ok\ntest_trailing_bytes (__main__.GateTests.test_trailing_bytes) ... ok\ntest_truncation_every_offset (__main__.GateTests.test_truncation_every_offset) ... ok\ntest_zip64_locator_hidden_in_member_comment (__main__.GateTests.test_zip64_locator_hidden_in_member_comment) ... ok\ntest_zip64_markers (__main__.GateTests.test_zip64_markers) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 0.266s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipgate",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipgate/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5f9b71595ac5ac31992c3b439bf445635b8d9c46c5f62a0d59f8013e23a10463",
+      "evidence": "es\": [\n      {\n        \"path\": \"docs/imd/openapi.json\",\n        \"kind\": \"file\",\n        \"bytes\": 23132,\n        \"sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n      }\n    ],\n    \"total_bytes\": 23132,\n    \"content_checked\": true,\n    \"archive_sha256\": \"a19b6d49f1bad5d27b51696e8050555390f1a006fc3420c87d57c8782257c718\",\n    \"preflight\": {\n      \"entries\": 1,\n      \"directory_bytes\": 67,\n      \"zip64\": false\n    }\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmanifest",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmanifest/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "38009c3cea3d11d39e9c7a6f0dd867f131d63ddb39d6ffcaa83bcc32c3eb9a9a",
+      "evidence": "229caf217242e06fd60bf9b0040afe01bce7f21\",\n    \"entries\": [\n      {\n        \"bytes\": 16,\n        \"kind\": \"file\",\n        \"path\": \"docs/readme.txt\",\n        \"sha256\": \"23018c49e1d72f88ef9d2ed95165f7c6b42169a6a78a34101a6ba34a23d95eb8\"\n      },\n      {\n        \"kind\": \"directory\",\n        \"path\": \"empty/\"\n      }\n    ],\n    \"entry_count\": 2,\n    \"file_bytes\": 16,\n    \"ok\": true\n  },\n  \"unsafe_archive_refused\": \"unsafe member path: '../escape.txt'\"\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmerge",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmerge/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".test_shared_limits_refuse_without_output) ... ok\ntest_symlink_member_blocks_all (__main__.MergeTests.test_symlink_member_blocks_all) ... ok\ntest_unsafe_later_archive_blocks_all (__main__.MergeTests.test_unsafe_later_archive_blocks_all) ... ok\ntest_wrong_digest_and_replaced_archive (__main__.MergeTests.test_wrong_digest_and_replaced_archive) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.199s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmerge",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmerge/metadata_selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "nempty_archive_after_exhausted_budget (__main__.MetadataTests.test_nonempty_archive_after_exhausted_budget) ... ok\ntest_one_byte_under_refuses_before_second_parser (__main__.MetadataTests.test_one_byte_under_refuses_before_second_parser) ... ok\ntest_per_archive_limit_still_applies (__main__.MetadataTests.test_per_archive_limit_still_applies) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.210s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmerge",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmerge/metadata_demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "331403c46d39732202e0e86403aa6d30a040abc480b8a33e034d40d34d0c1fd7",
+      "evidence": "e8e74f06015a3\",\n        \"entries\": 1,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 3462,\n          \"zip64\": false\n        }\n      }\n    ],\n    \"totals\": {\n      \"archives\": 2,\n      \"entries\": 2,\n      \"nodes\": 3,\n      \"uncompressed_bytes\": 23441\n    },\n    \"metadata\": {\n      \"directory_bytes\": 6925,\n      \"directory_byte_limit\": 6925\n    },\n    \"output\": \"test/scratch/merge-metadata-demo-ab9mp7w0/combined\"\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmerge",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmerge/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "1fe07c5684b739469ecfe73986bba68998e489170736aa559b96b6dc5427301c",
+      "evidence": "94a43e63fd2761be424\",\n        \"entries\": 1,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 66,\n          \"zip64\": false\n        }\n      }\n    ],\n    \"totals\": {\n      \"archives\": 2,\n      \"entries\": 2,\n      \"nodes\": 4,\n      \"uncompressed_bytes\": 23441\n    },\n    \"metadata\": {\n      \"directory_bytes\": 133,\n      \"directory_byte_limit\": 2097152\n    },\n    \"output\": \"test/scratch/zipmerge-demo-ju50nq2g/combined\"\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipselect",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipselect/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 30,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "in__.SelectionTests.test_unselected_symlink_is_rejected) ... ok\ntest_unselected_traversal_is_rejected (__main__.SelectionTests.test_unselected_traversal_is_rejected) ... ok\ntest_uppercase_approval_and_tuple (__main__.SelectionTests.test_uppercase_approval_and_tuple) ... ok\ntest_zero_length_file (__main__.SelectionTests.test_zero_length_file) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.406s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipselect",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipselect/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "920c70f103f60c34f58bd44e8ed572c1e39a024c0fb6bbf9ea04e3d53bfc0e4c",
+      "evidence": "   \"preflight\": {\n      \"entries\": 3,\n      \"directory_bytes\": 204,\n      \"zip64\": false\n    },\n    \"archive_entries\": 3,\n    \"archive_total_bytes\": 23161,\n    \"selected_files\": 1,\n    \"output_nodes\": 3,\n    \"output_bytes\": 23132,\n    \"entries\": [\n      {\n        \"path\": \"docs/imd/openapi.json\",\n        \"kind\": \"file\",\n        \"bytes\": 23132,\n        \"sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipverify",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipverify/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 28,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "sts.test_unexpected_file) ... ok\ntest_unselected_archive_file_is_extra (__main__.VerificationTests.test_unselected_archive_file_is_extra) ... ok\ntest_workspace_confinement_without_external_read (__main__.VerificationTests.test_workspace_confinement_without_external_read) ... ok\ntest_wrong_digest (__main__.VerificationTests.test_wrong_digest) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 0.311s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipverify",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipverify/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "7b2fb1a8bd10d5a26517e8a9b32436ed107ac974fc9d63b2ba0292697f4b27cc",
+      "evidence": "256\": \"d93adbda22243cd990629b6dc4b44a5f1ceadca26361f2b70053606c70e69421\",\n    \"all_archive_payloads_checked\": true,\n    \"exact_selected_tree\": true,\n    \"selected_files\": 1,\n    \"nodes_checked\": 3,\n    \"bytes_checked\": 23132,\n    \"preflight\": {\n      \"entries\": 3,\n      \"directory_bytes\": 194,\n      \"zip64\": false\n    }\n  },\n  \"same_length_tampering_refused\": \"content differs: 'docs/imd/openapi.json'\",\n  \"tampered_content_left_untouched\": true\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "batchintake",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/batchintake/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 12,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.006s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "batchintake",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/batchintake/batchintake.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "0d997cb952f436a0b1b3a0949ce36430a323c41b12d066c9a89aa8afe24b6a27",
+      "evidence": "d72\",\n    \"report_sha256\": \"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\",\n    \"received_batches\": [\n      1,\n      2\n    ],\n    \"missing_batches\": [],\n    \"received_rows\": 3,\n    \"missing_rows\": 0,\n    \"received_units\": \"1000000000000000000\",\n    \"missing_units\": \"0\",\n    \"budget_units\": \"1000000000000000000\",\n    \"scope\": \"review-file completeness only; not approval, entitlement, payment progress or replay protection\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "boundaudit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/boundaudit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 12,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "s) ... ok\ntest_non_tied_wrong_winner (__main__.AuditTests.test_non_tied_wrong_winner) ... ok\ntest_seeded_feasible_policies_and_exhaustive_awards (__main__.AuditTests.test_seeded_feasible_policies_and_exhaustive_awards) ... ok\ntest_uint256_fractional_weights_and_permutation (__main__.AuditTests.test_uint256_fractional_weights_and_permutation) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.752s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "boundaudit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/boundaudit/boundaudit.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "76ac92fbfd8deed5ef6adf28a8d06cedca0bf32fae7e5127d6e740b2c2eaedef",
+      "evidence": "ation\",\n    \"complete report fields and JSON types\"\n  ],\n  \"request_sha256\": \"8e0fd4c5fd8b46491263f6e845c20d51eeb048fceb34fd85a16e081c4178bd80\",\n  \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n  \"report_sha256\": \"6bbf3187a8756a55f0b12b6388ee32fbeb53f543eeb8270a2eb08d0e5126e3b7\",\n  \"scope\": \"arithmetic only; shared input validation; historical metadata; no entitlement, identity, balance or payment proof\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardaudit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardaudit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 13,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "__.AuditTests.test_small_exhaustive_subset_oracle) ... ok\ntest_uint256_and_fractional_weights (__main__.AuditTests.test_uint256_and_fractional_weights) ... ok\ntest_wrong_remainder_winner (__main__.AuditTests.test_wrong_remainder_winner) ... ok\ntest_wrong_tie_winner_preserving_total (__main__.AuditTests.test_wrong_tie_winner_preserving_total) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.555s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardaudit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardaudit/rewardaudit.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "d38b989e50d13d9fe77d7cda07eb72b921f41103690a724ee601ac8fe3dd5c24",
+      "evidence": "ed\": false,\n      \"units\": \"333333333333333333\"\n    },\n    {\n      \"id\": \"review\",\n      \"quota_units_fraction\": \"1000000000000000000/3\",\n      \"floor_units\": \"333333333333333333\",\n      \"remainder_fraction\": \"1/3\",\n      \"rounding_unit_awarded\": false,\n      \"units\": \"333333333333333333\"\n    }\n  ],\n  \"scope\": \"offline arithmetic only; shared input validators, independent integer quota check; no entitlement, identity, balance or payment proof\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbatch",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbatch/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.892s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbatch",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbatch/rewardbatch.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2ae2c3810b372411be398ebc10a2bdc2fe6d375d6d6addf471487f5701dcbeb7",
+      "evidence": "ied complete exact partition\",\n    \"bundle_sha256\": \"c7fc118104a2e18ad7df6e485e005feab9f0b9f700e151018a3d29716133cede\",\n    \"report_sha256\": \"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\",\n    \"batch_count\": 2,\n    \"contributor_count\": 3,\n    \"budget_units\": \"1000000000000000000\",\n    \"batched_units\": \"1000000000000000000\",\n    \"scope\": \"offline review batches only; no transaction, payment, entitlement or authorization\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbounds",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbounds/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "_identical) ... ok\ntest_seeded_exhaustive_oracle (__main__.BoundsTests.test_seeded_exhaustive_oracle) ... ok\ntest_tampering_types_and_request_disagreement (__main__.BoundsTests.test_tampering_types_and_request_disagreement) ... ok\ntest_uint256_and_fractional_weight_precision (__main__.BoundsTests.test_uint256_and_fractional_weight_precision) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.583s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbounds",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbounds/rewardbounds.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4785d6968fc2c01d8c9c80267cac2389da937138e77a735c5476ce04e93e2a41",
+      "evidence": "udget_units\": \"1000000000000000000\",\n    \"contributors\": 4,\n    \"request_sha256\": \"8e0fd4c5fd8b46491263f6e845c20d51eeb048fceb34fd85a16e081c4178bd80\",\n    \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n    \"report_sha256\": \"6bbf3187a8756a55f0b12b6388ee32fbeb53f543eeb8270a2eb08d0e5126e3b7\",\n    \"scope\": \"offline arithmetic and input agreement only; no entitlement, identity, balance or payment verified\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcompare",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcompare/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "est_equivalent_weight_notation (__main__.CompareTests.test_equivalent_weight_notation) ... ok\ntest_known_budget_paradox (__main__.CompareTests.test_known_budget_paradox) ... ok\ntest_same_budget_and_permutation (__main__.CompareTests.test_same_budget_and_permutation) ... ok\ntest_uint256_precision (__main__.CompareTests.test_uint256_precision) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.501s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcompare",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcompare/rewardcompare.py",
+        "demo"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "cfc40fca8afca2161537e20318974d0e94d50ef3755e7cc38da31ddd0a0cae23",
+      "evidence": "ha256\": \"8cb645f390d0ac76494ffbfc1609b87200498bcfdaf980b22fbce7480197cb5d\",\n    \"scope\": \"offline arithmetic and input agreement only; no work, identity, balance, signature, or payment verified\"\n  },\n  \"scope\": \"comparison of two complete allocations, not incremental payments or entitlement; no balance, identity, work or payment verified\",\n  \"warning\": \"largest remainder is not budget-monotonic; review decreases before replacing an allocation\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcsv",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcsv/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 8,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.192s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcsv",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcsv/rewardcsv.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2ccfd73b3de374d85ff1251b4ec93b7fa9986ee6fdf6e45e2470f7dc59683948",
+      "evidence": "b9089470c8080f0a68e\",\"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\"\n\"research\",\"\",\"333333333333333333\",\"0.333333333333333333\",\"false\",\"1\",\"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\"\n\"review\",\"\",\"333333333333333333\",\"0.333333333333333333\",\"false\",\"1\",\"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\"\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardledger",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardledger/rewardledger.py",
+        "line-3/tools/rewardledger/example.json"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "3c73b2066953213137aa6730bd0d6d74066c96edb68f697948d43bb22d29821b",
+      "evidence": "report_sha256,509b1c4764ab1317315e615abd530d46c64fccd49ac3dd2ce5eb523e74fbc166\nid,address,weight_fraction,units,amount,rounding_unit_awarded\nbuilder,,2/3,666666666666666667,0.666666666666666667,true\nreviewer,,1/3,333333333333333333,0.333333333333333333,false\n{\"output\": \"stdout\", \"report_sha256\": \"509b1c4764ab1317315e615abd530d46c64fccd49ac3dd2ce5eb523e74fbc166\", \"rows\": 2}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardmerge",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardmerge/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.715s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardmerge",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardmerge/rewardmerge.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "61be4119257c00612bdbb54ee34cfea40504addd9aa8b0f2ed31857fe159e5ae",
+      "evidence": "\n  \"verification\": {\n    \"schema\": \"rewardmerge-verification-v1\",\n    \"result\": \"verified cumulative allocation arithmetic\",\n    \"report_sha256\": \"56978e7ff138260b3cdf56e904e6e6499b9d2288313461378fc8ba0ac4e62750\",\n    \"budget_units\": \"3000000000000000000\",\n    \"review_required\": false,\n    \"scope\": \"sum of verified independent allocations; repeated reports counted once per round label; no entitlement, identity, balance or payment verified\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardproof",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardproof/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.866s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardproof",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardproof/rewardproof.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5375ab2a465332d73bac9365e2b45b472a438753e33f3f624f9703aa055f9be3",
+      "evidence": "   \"id\": \"build\",\n      \"rounding_unit_awarded\": true,\n      \"units\": \"333333333333333334\",\n      \"weight_fraction\": \"1\"\n    },\n    \"proof_sha256\": \"122cd93bc37cc8e1d299068c3d900b8ef32b3af8139e39929eaacf85e5ee30a5\",\n    \"scope\": \"inclusion under the supplied root only; no authentication, independent arithmetic audit, entitlement, balance or payment\"\n  },\n  \"demo\": \"Illustrative roles; root created locally for demonstration, not authenticated.\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardreceipt",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardreceipt/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 8,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "tTests.test_changed_weights_rejected) ... ok\ntest_duplicate_json_keys_rejected_by_reader (__main__.ReceiptTests.test_duplicate_json_keys_rejected_by_reader) ... ok\ntest_exact_zto_receipt (__main__.ReceiptTests.test_exact_zto_receipt) ... ok\ntest_numeric_type_substitution_rejected (__main__.ReceiptTests.test_numeric_type_substitution_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardreceipt",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardreceipt/rewardreceipt.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "b0e8911c43f57dc27ac26bcc20028466d577ba61f8961cd15cd756ea10118ddf",
+      "evidence": "  },\n  \"budget_units\": \"1000000000000000000\",\n  \"contributors\": 3,\n  \"request_sha256\": \"2aab721988a38569c3ebc8a3beb62fe287fa4abde5e657d33022430c2f6d6314\",\n  \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n  \"report_sha256\": \"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\",\n  \"scope\": \"offline arithmetic and input agreement only; no work, identity, balance, signature, or payment verified\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardsplit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardsplit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 19,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "rves_pretty_output_at_exact_limit (__main__.RewardTests.test_writer_preserves_pretty_output_at_exact_limit) ... ok\ntest_writer_refuses_oversize_before_creating_file_or_stdout (__main__.RewardTests.test_writer_refuses_oversize_before_creating_file_or_stdout) ... ok\ntest_zero_weight_never_wins (__main__.RewardTests.test_zero_weight_never_wins) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.300s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardsplit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardsplit/rewardsplit.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "c5cff3e2b2cfd34bfcf17898b3a85e43b79080f7701052a730b03317b1c4a1ac",
+      "evidence": "\n      \"id\": \"research\",\n      \"weight_fraction\": \"1\",\n      \"units\": \"333333333333333333\",\n      \"amount\": \"0.333333333333333333\",\n      \"rounding_unit_awarded\": false\n    },\n    {\n      \"id\": \"review\",\n      \"weight_fraction\": \"1\",\n      \"units\": \"333333333333333333\",\n      \"amount\": \"0.333333333333333333\",\n      \"rounding_unit_awarded\": false\n    }\n  ],\n  \"demo\": \"Illustrative task roles, not recipient identities; no addresses or payments.\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardtarget",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardtarget/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 6,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": " ... ok\ntest_no_match_and_boundary (__main__.RewardTargetTests.test_no_match_and_boundary) ... ok\ntest_nonmonotonic_demo (__main__.RewardTargetTests.test_nonmonotonic_demo) ... ok\ntest_seeded_oracle (__main__.RewardTargetTests.test_seeded_oracle) ... ok\ntest_strict_limits_and_targets (__main__.RewardTargetTests.test_strict_limits_and_targets) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.659s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardtarget",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardtarget/rewardtarget.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "273e879ad4cd5441d49eacf67847352c67d439913d8cb920cec0f635a6c6075f",
+      "evidence": "6486791e820d71fc8eac9cfdf515b66fde8b381818caa0395ccbefc0\",\n    \"budgets_checked\": 4,\n    \"first_match\": {\n      \"budget_units\": \"25\",\n      \"budget_amount\": \"0.000000000000000025\",\n      \"allocation_sha256\": \"242019588cdecea60c482eca654f3531b63fe37dcb6826fd2f9f29202906974d\",\n      \"target_shares\": [\n        {\n          \"id\": \"d\",\n          \"units\": \"3\"\n        },\n        {\n          \"id\": \"e\",\n          \"units\": \"3\"\n        }\n      ]\n    }\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardwindow",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardwindow/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 5,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "est_cli_roundtrip) ... ok\ntest_limits (__main__.WindowTests.test_limits) ... ok\ntest_paradox_and_verification (__main__.WindowTests.test_paradox_and_verification) ... ok\ntest_seeded_consecutive_conservation (__main__.WindowTests.test_seeded_consecutive_conservation) ... ok\ntest_tampering_rejected (__main__.WindowTests.test_tampering_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.546s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardwindow",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardwindow/rewardwindow.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "097dec8b5efdb8d15eb3c4b9112370e88410e775156180aa20e90a96622cafe1",
+      "evidence": "ntitlement\"\n  },\n  \"verification\": {\n    \"schema\": \"rewardwindow-verification-v1\",\n    \"result\": \"verified every atomic-unit transition in window\",\n    \"scan_sha256\": \"96dc20f6c84be1687918e94e7be48fbdd61b0455973ac703015b0cdc4a0434f8\",\n    \"transitions_with_reversal\": 1,\n    \"start_budget_units\": \"25\",\n    \"end_budget_units\": \"28\",\n    \"scope\": \"every consecutive atomic-unit budget in this window; arithmetic only, no payment or entitlement\"\n  }\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "apidelta",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "gathering/audit_apidelta_36.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 44,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "............................................\n----------------------------------------------------------------------\nRan 44 tests in 0.398s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "apidelta",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/apidelta/apidelta.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "e411daff52e54d64107acb40fc08d5f054e94c74d5d411875946f5a641d5c6db",
+      "evidence": "request property is mandatory.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"demo\": \"Synthetic breaking revision of a real captured public description; not an observed service change.\",\n  \"baseline_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "authcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/authcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 13,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".............\n----------------------------------------------------------------------\nRan 13 tests in 10.674s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "authcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/authcheck/authcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "37de45f0257230f48ca701bc92464f322f73afdabe53e5452b425c3073d0ac25",
+      "evidence": "time compatibility. Review findings are unresolved.\",\n  \"extension\": \"authcheck-v1 (includes dependcheck and all earlier line 4 analyzers)\",\n  \"security_alternative_comparisons\": 12,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetically remove the anonymous override from the captured capabilities operation; no operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "boundcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/boundcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.281s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "boundcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/boundcheck/boundcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "d5c865fff17c024077f4bfae75637218ef513107dd276b6e16edbbc948d2bead",
+      "evidence": "ssage\": \"Constraint changed; this rule needs human review.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"boundcheck-v1\",\n  \"demo\": \"Hypothetical clientNote bound change in a captured real public API; no service operation called.\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "constcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/constcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.300s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "constcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/constcheck/constcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4d54f4b58827031d3708e1170f72c219282669f0c3475643a60835315656f937",
+      "evidence": "eds human review.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"constcheck-v1 (includes multiplecheck-v1 and boundcheck-v1)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical fixed clientMode24 change in the captured public IMD API. No operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "dependcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/dependcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.405s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "dependcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/dependcheck/dependcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "035e932188bc50deda683a5f6e7068d364b44d738605a62ed41309fd623041d4",
+      "evidence": "resolved.\",\n  \"extension\": \"dependcheck-v1 (includes uniquecheck, constcheck, multiplecheck, boundcheck)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical dependency added to the captured public IMD description; no operation called.\",\n  \"illustrative_presence_change\": \"clientReference now also requires clientContext; values and other required fields are outside this illustration.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "dispatchcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/dispatchcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 19,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.134s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "dispatchcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/dispatchcheck/dispatchcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "a47fe1d2b253d692fd8d20c3d1c22f3d415ef7f2d05eadabbe7f12cb56ebe9aa",
+      "evidence": "whole-union incompatibility. Implicit dispatch, union satisfiability and unmatched branches are not inferred.\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Real saved IMD operation with hypothetical response dispatch. The mapping is unchanged but receipt changes from string to integer in its target. No described operation is called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "fallbackheaders",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/fallbackheaders/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.050s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "fallbackheaders",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/fallbackheaders/fallbackheaders.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "0fb67faebf0aef958e31df6fcd320c51320bb0826befef347fec554862a25ac6",
+      "evidence": "0\n      ]\n    }\n  ],\n  \"remapped_header_pairs\": 1,\n  \"header_visits\": 5,\n  \"header_scope\": \"common inline top-level operations; changed effective status selectors with both responses present\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical 200 override of a 2XX response on a saved IMD path; no described endpoint is called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "headercheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/headercheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.035s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "headercheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/headercheck/headercheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "abf20fdfc1401aac4472dbd16d624bfe16ad16e2809df152d9c198c5ee45152c",
+      "evidence": "line 4 analyzers)\",\n  \"header_scope\": \"response headers of common inline paths operations; exact matching status keys\",\n  \"header_visits\": 4,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Real saved paths with a hypothetical required response header made optional; both header declarations are invented in memory, no endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "idcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/idcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 13,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.374s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "idcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/idcheck/idcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "05871ef602a6df7aec3b2aeea40feccc1b1748159715b5b06d1d9a2bb2d9919e",
+      "evidence": "s are unresolved.\",\n  \"extension\": \"idcheck-v1 (includes servercheck and all earlier line 4 analyzers)\",\n  \"identifier_scope\": \"inline top-level paths operations; callbacks and webhooks excluded\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"One identifier renamed hypothetically in the saved public description; no endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "multiplecheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/multiplecheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "................\n----------------------------------------------------------------------\nRan 16 tests in 1.610s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "multiplecheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/multiplecheck/multiplecheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "f9b516cd68702f981f257eb88026f32dee945b25a97579dcdb210cead79067ca",
+      "evidence": "limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"multiplecheck-v1 (includes boundcheck-v1)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical batchSize change in the captured public IMD API. A formerly valid value 2 is rejected by the new multiple 3. No operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "oauthcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/oauthcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.358s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "oauthcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/oauthcheck/oauthcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "c031ed4fdf99f101ce4f07012aebf6f0d050df9f23fabc44b102c7110c6b5404",
+      "evidence": "or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"oauthcheck-v1 (includes schemecheck and earlier line 4 analyzers)\",\n  \"oauth_alternative_comparisons\": 9,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical OAuth token URL migration added to the bundled public description; no endpoint called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "paramcheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/paramcheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 14,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.034s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "paramcheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/paramcheck/paramcheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "9248ce7870d1348fecb6dab18c72b883e2315286d6b3e98350ebd2ef3a5a1b78",
+      "evidence": "and all earlier analyzers)\",\n  \"parameter_visits\": 8,\n  \"parameter_scope\": \"effective parameters of common inline top-level paths operations\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical optional array parameter on a real saved IMD operation: workerTags33=a&workerTags33=b becomes workerTags33=a,b. No endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "schemecheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/schemecheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.492s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "schemecheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/schemecheck/schemecheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "1469fc1e10a4a7eee4adcf596eb10dd86f01a49b908a9f3ae3df86d2a32bf26e",
+      "evidence": "eview findings are unresolved.\",\n  \"extension\": \"schemecheck-v1 (includes authcheck and all earlier line 4 analyzers)\",\n  \"security_alternative_comparisons\": 11,\n  \"security_transport_comparisons\": 14,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetically change the captured HTTP Bearer scheme to Basic; no API operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "servercheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/servercheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.373s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "servercheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/servercheck/servercheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4553b1796d90fec83e69113dfacdcedbcdbf9258f434218cdff332243b5cc983",
+      "evidence": "I validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"servercheck-v1 (includes oauthcheck and earlier line 4 analyzers)\",\n  \"server_expansion_work\": 2,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical operation server migration of the saved public description; no endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "statuscheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/statuscheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 22,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.079s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "statuscheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/statuscheck/statuscheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "00f2c82c82288fc15dca507bc713ef3293b753fda54f42a3d93fd68860263f2c",
+      "evidence": "\"200\",\n      \"statuses\": [\n        200\n      ]\n    }\n  ],\n  \"status_scope\": \"100..599; common inline top-level operations; exact > class > default\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical 200 integer override of a 2XX string on a real saved IMD path. Response maps are invented in memory; no API operation is called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "uniquecheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/uniquecheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.349s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "uniquecheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/uniquecheck/uniquecheck.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "6cb3aa195095f7fceb0c373c68bb2154b1374a49910ce3565b330e4336161aab",
+      "evidence": "or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"uniquecheck-v1 (includes constcheck-v1, multiplecheck-v1, boundcheck-v1)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical uniqueness change in the captured public IMD description; no operation called.\",\n  \"illustrative_old_request\": {\n    \"clientTags25\": [\n      \"urgent\",\n      \"urgent\"\n    ]\n  }\n}\n"
+    }
+  ]
+}

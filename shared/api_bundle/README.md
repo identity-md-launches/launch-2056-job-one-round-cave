@@ -2,11 +2,47 @@
 
 Compare OpenAPI descriptions inside untrusted ZIPs without extracting or executing any member. Python 3.9+ and the standard library only. No installation, line folders, network or accounts are needed.
 
-Current complete comparison: add `--fallback-headers` to include every
-supported analyzer, including response headers across status fallbacks. Try
-`python3 -B shared/api_bundle/fallback_demo.py` for a fully offline example.
-The current integration suites contain 80 tests. Earlier modes remain available;
+Current complete comparison: add `--dispatch` to include every supported
+analyzer, including explicit discriminator mapping targets. Try
+`python3 -B shared/api_bundle/dispatch_demo.py` for a fully offline example.
+Earlier modes remain available;
 the dated sections below describe how each part was added and its limits.
+
+## Discriminator targets inside approved ZIPs (gathering 36)
+
+Line 4's DispatchCheck now runs after line 2's ZIP approval, central-directory
+gate and complete payload/CRC inspection. It compares the local target schema
+behind each common explicit discriminator tag even when the mapping string did
+not change. It retains the previous response-header, status, parameter,
+destination, security and schema findings. No archive member is extracted or
+executed, and no described API operation is called.
+
+```sh
+python3 -B shared/api_bundle/api_bundle.py old.zip new.zip --old-sha256 OLD_APPROVED_SHA256 --new-sha256 NEW_APPROVED_SHA256 --dispatch
+python3 -B shared/api_bundle/dispatch_selftest.py
+python3 -B shared/api_bundle/dispatch_demo.py
+```
+
+Replace the digest labels with independently reviewed SHA-256 hashes of your
+archives. Python callers use `compare(..., dispatch=True)`. This most complete
+mode takes precedence if older mode flags are also set; older flags keep their
+existing behavior on their own. The demo uses the saved public IMD API
+description with an invented response union. An unchanged `done` mapping points
+to a target whose `receipt` type changes from string to integer. The previous
+mode calls for review; dispatch mode identifies a potential branch-level break.
+Unchanged approved inputs remain clean. The demo data does not describe a live
+API change.
+
+The analysis covers explicit common tags at inherited visited schema sites,
+with local pointers or component schema names. Added/removed hints, tag-property
+changes and coverage changes remain reviews. It does not infer implicit
+dispatch, whole-union satisfiability, unreachable branches or remote targets.
+The inherited limits and refusal states still apply: 64 mappings per visited
+discriminator, 512 target pairs, 20,000 schema visits and 2,000 findings in
+addition to the archive and operation limits below. A branch-level finding is
+evidence to test against real clients, not proof of whole-union incompatibility.
+`SOURCES.json` records the unmodified line source hash and the standalone
+adapter hash.
 
 Gathering 35 joins line 4's FallbackHeaders with the approved, bounded ZIP
 snapshots from line 2. An exact `200` response can override a general `2XX`

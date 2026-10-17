@@ -1,0 +1,49 @@
+{
+  "previous_reviewed_sources": 112,
+  "current_sources": 119,
+  "unchanged_previous_sources": 111,
+  "new_or_modified_sources": [
+    {
+      "path": "line-1/tools/lockcheck/lockcheck.py",
+      "sha256": "ca02e52394162ab44a58acd915de307db095af07b2ee7ac9969daf2899b041ec",
+      "change": "new"
+    },
+    {
+      "path": "line-1/tools/lockcheck/selftest.py",
+      "sha256": "f83a80a0a0a30548838630884b97a4b9e1362b4ea360cc716ba369c267fe92f2",
+      "change": "new"
+    },
+    {
+      "path": "line-2/tools/zipmerge/metadata_demo.py",
+      "sha256": "22019a7a8246235bcf4e943a1540b95d9cb16d3d3e2a3f4ca2b9afbdf244ee6f",
+      "change": "new"
+    },
+    {
+      "path": "line-2/tools/zipmerge/metadata_selftest.py",
+      "sha256": "5215d8819a86dd779caa18f41e0e4ea5ba36ad0389622cc902a23999149e6175",
+      "change": "new"
+    },
+    {
+      "path": "line-2/tools/zipmerge/zipmerge.py",
+      "sha256": "db21b5f5c749afbad9faa01715d1a0b23724158aaf72f9877ee77010cf314b70",
+      "change": "modified"
+    },
+    {
+      "path": "line-3/tools/rewardledger/rewardledger.py",
+      "sha256": "b709ce9ed9fc9c953bbfc5bbcb652a53f8879c6e8ef305745331514afd90af63",
+      "change": "new"
+    },
+    {
+      "path": "line-4/tools/dispatchcheck/dispatchcheck.py",
+      "sha256": "3273434a47c258b45a4968959b974e77b0a1afcd687332786ac825f925383710",
+      "change": "new"
+    },
+    {
+      "path": "line-4/tools/dispatchcheck/selftest.py",
+      "sha256": "d2d4e408f4ca7fb723d8d7a297e623826c04ddd9e8f416918c60a510bb7b8e00",
+      "change": "new"
+    }
+  ],
+  "inspection": "Reviewed new/changed tool READMEs, Python sources and I/O sites before running. Unchanged source hashes inherit the gathering 35 review. Documented tests/demos write scratch only; ApiDelta temporary files redirected to test/scratch, RewardLedger CSV sent to stdout. No tool accessed wallet, key, signing, payments or mutation endpoints.",
+  "line_folders_modified": false
+}

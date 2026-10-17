@@ -1,0 +1,35 @@
+{
+  "previous_sha256": "a32258ddc7c87486b71d4fcf5170171d79af50cec0e9fa7a36c28463f9b46aae",
+  "generated_pigment_sha256": "dd6e7dd98ff0ae7cdbc97cb73351a71f64350c8d1c6310c1728af7b5498e5717",
+  "wall_sha256": "9bcdcf39443ba985ffe82d9516e2e7f356a6d3bf9263a132774be1d685504471",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "RGB PNG",
+  "png_bytes": 2769949,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_bytes": 89831,
+  "mark_rectangle": [
+    155,
+    956,
+    175,
+    120
+  ],
+  "pigment_source_dimensions": [
+    1536,
+    1024
+  ],
+  "pigment_source_bounds": [
+    127,
+    74,
+    1434,
+    931
+  ],
+  "changed_pixels": 4832,
+  "pixels_changed_outside": 0,
+  "method": "Imagegen transparent earth pigment composited on bare stone; all inherited pixels outside the mark rectangle are exact."
+}

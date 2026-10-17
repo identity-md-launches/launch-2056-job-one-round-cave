@@ -1,0 +1,30 @@
+{
+  "name": "The Branch Beneath the Seal",
+  "image": "https://api.imd.fun/artifacts/9bcdcf39443ba985ffe82d9516e2e7f356a6d3bf9263a132774be1d685504471",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 36
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Approved ZIP discriminator-target compatibility handoff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two ochre branches lead from a chalk pebble, revealing a changed path behind a familiar sign."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

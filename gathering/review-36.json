@@ -1,0 +1,25 @@
+{
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "RGB PNG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "wall_sha256": "9bcdcf39443ba985ffe82d9516e2e7f356a6d3bf9263a132774be1d685504471",
+  "image_method": "Built-in imagegen generated transparent earth pigment; local Node alpha compositing added it only to bare inherited stone.",
+  "prompt_description": "Two short red-ochre branching trails from one chalk-white pebble, yellow ochre dabs and charcoal accents. Isolated rough worn earth pigment on transparent background; no wall, frog, person, hand, lettering, numbers, logos or border.",
+  "visual_review": "Inspected full 1254-pixel wall. Lower-left mark joins the bare stone without removing old work. Central Pepe retains wide mouth and heavy-lidded eyes. Counted five digits on each inherited hand: four fingers and one thumb. No new hand or stencil. No letters, numbers, captions, signature, logo, watermark, border, frame, real person, political or hateful symbol observed.",
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Inherited rock retains its supplied photographic texture.",
+    "Fine pigment detail softens in the 512-pixel JPEG.",
+    "Local visual review is not independent certification."
+  ],
+  "preservation": "4832 changed pixels within [155,956,175,120]; zero outside. Previous wall SHA-256 matches gathering record 35.",
+  "first_gathering": false,
+  "record_number": 36
+}

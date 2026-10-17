@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "wall_sha256": "9bcdcf39443ba985ffe82d9516e2e7f356a6d3bf9263a132774be1d685504471",
+  "png_format": "RGB PNG",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_bytes": 2769949,
+  "jpeg_format": "JPEG",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_bytes": 89831,
+  "records": 178,
+  "painted": 78,
+  "placeholders": 100,
+  "changed_pixels": 4832,
+  "pixels_changed_outside": 0,
+  "line_folders_unchanged": true,
+  "checked_changed_paths": 24,
+  "line_commands": 114,
+  "line_unittest_cases": 768,
+  "shared_tests": 85,
+  "unmet_visual_requirements": [],
+  "visual_review": "Manual inspection and byte preservation check; not independent certification."
+}

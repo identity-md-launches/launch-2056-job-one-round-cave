@@ -13,7 +13,7 @@ import time
 import zipfile
 import zlib
 
-from vendor import apidelta, oauthcheck, schemecheck, servercheck, paramcheck, statuscheck, fallbackheaders, safezip, zipgate
+from vendor import apidelta, oauthcheck, schemecheck, servercheck, paramcheck, statuscheck, fallbackheaders, dispatchcheck, safezip, zipgate
 
 MAX_ARCHIVE = 32 * 1024 * 1024
 
@@ -102,7 +102,8 @@ def read_bundle(path, member='openapi.json', expected_sha256=None, checkpoint=la
 
 def compare(old, new, member='openapi.json', old_sha256=None, new_sha256=None,
             seconds=None, cancelled=None, nodes=32000, directory_bytes=2097152,
-            oauth=False, servers=False, parameters=False, statuses=False, fallback_headers=False):
+            oauth=False, servers=False, parameters=False, statuses=False, fallback_headers=False,
+            dispatch=False):
     if seconds is not None:
         try:
             valid_seconds = (not isinstance(seconds, bool)
@@ -125,7 +126,9 @@ def compare(old, new, member='openapi.json', old_sha256=None, new_sha256=None,
     a, before = read_bundle(old, member, old_sha256, checkpoint, nodes, directory_bytes)
     b, after = read_bundle(new, member, new_sha256, checkpoint, nodes, directory_bytes)
     checkpoint()
-    report = (fallbackheaders if fallback_headers else statuscheck if statuses else paramcheck if parameters else servercheck if servers else oauthcheck if oauth else schemecheck).compare(a, b)
+    report = (dispatchcheck if dispatch else fallbackheaders if fallback_headers else
+              statuscheck if statuses else paramcheck if parameters else servercheck if servers else
+              oauthcheck if oauth else schemecheck).compare(a, b)
     checkpoint()
     report['bundle_inputs'] = {'old': before, 'new': after}
     return report
@@ -146,11 +149,12 @@ def main():
     parser.add_argument('--parameters', action='store_true', help='also check parameter wire formats, response headers and operation IDs; includes server and OAuth checks')
     parser.add_argument('--statuses', action='store_true', help='also check response status fallbacks; includes parameter, server and OAuth checks')
     parser.add_argument('--fallback-headers', action='store_true', help='also check response headers across status overrides; includes all earlier analyzers')
+    parser.add_argument('--dispatch', action='store_true', help='also compare explicit discriminator mapping targets; includes all earlier analyzers')
     args = parser.parse_args()
     try:
         report = compare(args.old, args.new, args.member, args.old_sha256,
                          args.new_sha256, args.seconds, nodes=args.nodes,
-                         directory_bytes=args.directory_bytes, oauth=args.oauth, servers=args.servers, parameters=args.parameters, statuses=args.statuses, fallback_headers=args.fallback_headers)
+                         directory_bytes=args.directory_bytes, oauth=args.oauth, servers=args.servers, parameters=args.parameters, statuses=args.statuses, fallback_headers=args.fallback_headers, dispatch=args.dispatch)
         print(json.dumps(report, indent=2, allow_nan=False))
         return {'breaking': 1, 'review_required': 3, 'no_detected_breakage': 0}[report['status']]
     except (ValueError, OSError, RuntimeError, EOFError, zipfile.BadZipFile,

@@ -100,5 +100,11 @@
     "source_sha256": "fa1e518516c966bcc6fb9ef10a567455f99a707fcffaf13223cd41932a49d6c8",
     "sha256": "7eab42f163aaa411fed91f4758cb4648e1b86eb58fc7c14fba64b8467cdbd7cf",
     "adaptation": "Sibling StatusCheck import and demo capture paths adjusted for standalone shared layout only; comparison logic unchanged."
+  },
+  "vendor/dispatchcheck.py": {
+    "source": "line-4/tools/dispatchcheck/dispatchcheck.py",
+    "source_sha256": "3273434a47c258b45a4968959b974e77b0a1afcd687332786ac825f925383710",
+    "sha256": "2b06fe9a8accf28df8652f79a32b1fae1fe120d5e81c336c2347e7f9ff28b5a6",
+    "adaptation": "Sibling FallbackHeaders import and demo capture paths adjusted for standalone shared layout only; comparison logic unchanged."
   }
 }
